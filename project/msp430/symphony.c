@@ -22,13 +22,13 @@ void symphony(void) {
       b_note();
       c_note();
       b_note();
-      for(j=0; j<5000; j++);
+      for(j=0; j<3000; j++);
       b_note();
 }
 
 void a_note(void) {
   P1OUT |= BIT0 + BIT6;
-  buzzer_set_period(10000);
+  buzzer_set_period(11000);
   for(j=0; j<20000; j++);
   buzzer_set_period(0);
   P1OUT &= ~BIT0;
@@ -38,7 +38,7 @@ void a_note(void) {
 
 void b_note(void) {
   P1OUT |= BIT6;
-  buzzer_set_period(9000);
+  buzzer_set_period(10000);
   for(j=0; j<20000; j++);
   buzzer_set_period(0);
   P1OUT &= ~BIT6;
@@ -47,7 +47,7 @@ void b_note(void) {
 
 void c_note(void) {
   P1OUT |= BIT0 + BIT6;
-  buzzer_set_period(8000);
+  buzzer_set_period(9000);
   for(j=0; j<20000; j++);
   buzzer_set_period(0);
   P1OUT &= ~BIT0;
@@ -57,7 +57,7 @@ void c_note(void) {
 
 void d_note(void) {
   P1OUT |= BIT0;
-  buzzer_set_period(7000);
+  buzzer_set_period(8000);
   for(j=0; j<20000; j++);
   buzzer_set_period(0);
   P1OUT &= ~BIT0;
@@ -66,7 +66,7 @@ void d_note(void) {
 
 void e_note(void) {
   P1OUT |= BIT0 + BIT6;
-  buzzer_set_period(6000);
+  buzzer_set_period(6500);
   for(j=0; j<20000; j++);
   buzzer_set_period(0);
   P1OUT &= ~BIT0;
